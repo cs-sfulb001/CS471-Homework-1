@@ -5,13 +5,12 @@ CXXFlags = -pthread -unistd
 SRC = src/main.cpp
 target = my_program.sh
 
-all: main
+all: Question2
 
-$(target): $(SRC)
-	$(CXX) -o $@ $^
-
-main:
-	gcc src/main.c $(CXXFlags)
+Question2:
+	gcc src/Question2.c $(CXXFlags) -o Question2.out
+Question3:
+	gcc src/Question3.c $(CXXFlags) -o Question3.out
 
 clean:
-	del $(target)
+	rm -f *.out
